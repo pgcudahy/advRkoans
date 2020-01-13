@@ -1,0 +1,16 @@
+Package: AdvancedRKoans
+Title: Walk the path to the Mountain
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Patrick",
+           family = "Cudahy",
+           role = c("aut", "cre"),
+           email = "pgcudahy@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Inspired by Edgecase's "Ruby Koans" which can be found at http://rubykoans.com/ 
+    but following Hadley Wickham's Advanced R https://adv-r.hadley.nz/
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 2.1.0)
