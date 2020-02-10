@@ -1,4 +1,4 @@
 library(testthat)
-library(AdvancedRKoans)
+library(advRkoans)
 
-test_check("AdvancedRKoans")
+test_check("advRkoans")
