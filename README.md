@@ -4,7 +4,7 @@ Following Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/).
 Inspired by Greg Malcom's [Python Koans](https://github.com/gregmalcolm/python_koans), 
 which are in turn inspired by Edgecase's [Ruby Koans](http://rubykoans.com/).
 
-![Screenshot](man/images/screenshot.png)
+<img src="man/images/screenshot.png" width="512">
 
 ## Getting started
 ```
