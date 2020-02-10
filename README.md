@@ -15,25 +15,6 @@ remote: Total 40 (delta 6), reused 37 (delta 5), pack-reused 0
 Unpacking objects: 100% (40/40), done.
 pgcudahy$ cd advRkoans/
 pgcudahy$ R
-
-R version 3.6.0 (2019-04-26) -- "Planting of a Tree"
-Copyright (C) 2019 The R Foundation for Statistical Computing
-Platform: x86_64-apple-darwin15.6.0 (64-bit)
-
-R is free software and comes with ABSOLUTELY NO WARRANTY.
-You are welcome to redistribute it under certain conditions.
-Type 'license()' or 'licence()' for distribution details.
-
-  Natural language support but running in an English locale
-
-R is a collaborative project with many contributors.
-Type 'contributors()' for more information and
-'citation()' on how to cite R or R packages in publications.
-
-Type 'demo()' for some demos, 'help()' for on-line help, or
-'help.start()' for an HTML browser interface to help.
-Type 'q()' to quit R.
-
 > devtools::load_all(".")
 Loading advRkoans
 > walk_the_path()
