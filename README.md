@@ -33,11 +33,12 @@ Wubba lubba dub dub
 
 > 
 ```
-Most tests are *fixed* by filling the missing parts of `expect` functions. Eg:
+Most tests are fixed by opening the file with the test error in a text editor
+and filling in the missing parts of `expect` functions. Eg:
 ```
     testthat::expect_equal(`__`, 1+2)
 ```
-which can be fixed by replacing the __ part with the appropriate code:
+which can be fixed by replacing the \`__\` part with the appropriate code:
 ```
     testthat::expect_equal(3, 1+2))
 ```
