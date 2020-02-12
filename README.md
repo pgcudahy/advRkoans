@@ -1,7 +1,8 @@
 # advRkoans
-
+<!-- badges: start -->
 [![DOI](https://zenodo.org/badge/239526103.svg)](https://zenodo.org/badge/latestdoi/239526103)
-
+[![R build status](https://github.com/pgcudahy/advRkoans/workflows/R-CMD-check/badge.svg)](https://github.com/pgcudahy/advRkoans/actions)
+<!-- badges: end -->
 advRkoans is an interactive tutorial for learning advanced R programming language by making tests pass. 
 Following Hadley Wickham's [Advanced R](https://adv-r.hadley.nz/). 
 Inspired by Greg Malcom's [Python Koans](https://github.com/gregmalcolm/python_koans), 
