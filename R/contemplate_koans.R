@@ -15,6 +15,11 @@
 #count passed tests
 #also a feature to run named tests
 
+#' Walk the path to R enlightenment
+#'
+#' \code{walk_the_path} runs tests within the lessons and provides feedback
+#'
+#' @export
 walk_the_path <- function() {
 
     "Run the koan tests with a custom runner output."

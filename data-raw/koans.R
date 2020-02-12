@@ -10,4 +10,4 @@ koans_df <- dplyr::tibble(lesson_file = unlist(koans)) %>%
         nrow)) %>%
     dplyr::mutate(cumulative_koans = purrr::accumulate(number_koans, `+`))
 
-usethis::use_data(koans_df, overwrite = T)
+usethis::use_data(koans_df, overwrite = T, internal = TRUE)

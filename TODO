@@ -1,6 +1,1 @@
-Get a doi and run usethis::use_citation
-
-Figure out how to catch "unexpected input" errors rather than have the 
-interpreter barf
-
 Set up testing of the koans
