@@ -19,8 +19,7 @@ walk_the_path <- function() {
 
     "Run the koan tests with a custom runner output."
 
-    koan_sources <- readLines("koans.txt", warn = FALSE)
-    for (koan in koan_sources) {
+    for (koan in koans) {
         testthat::test_file(koan, reporter = sensei)
         #Sensei throws a restart if a test fails
         #Let's catch it and stop parsing any new files

@@ -61,19 +61,7 @@ sensei <- R6::R6Class("sensei",
   )
 )
 
-#, Example output
-#, Thinking AboutTuples
-#,   test_creating_a_tuple has expanded your awareness.
-#,   test_tuples_are_immutable_so_item_assignment_is_not_possible has damaged your karma.
-
-#, You have not yet reached enlightenment ...
-#,   AssertionError: Regex didn't match: '-=> FILL ME IN! <=-' not found in "'tuple' object does not support item assignment"
-
-#, Please meditate on the following code:
-#,   File "/Users/pgcudahy/Documents/learn_programming/python_koans/python3/koans/about_tuples.py", line 22, in test_tuples_are_immutable_so_item_assignment_is_not_possible
-#,     self.assertRegex(msg, __)
-
-
+#, Need to include overall report (eg from pytonkoans)
 #, You have completed 63 (20 %) koans and 7 (out of 37) lessons.
 #, You are now 239 koans and 30 lessons away from reaching enlightenment.
 
