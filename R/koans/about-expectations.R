@@ -5,6 +5,13 @@ testthat::test_that("expect truth", {
     testthat::expect_true(`___`) # This should be TRUE
 })
 
+testthat::test_that("expect with messages", {
+
+    #Enlightenment may be more easily achieved with appropriate messages.
+
+    testthat::expect_true(`___`, "This should be True -- Please fix this")
+})
+
 testthat::test_that("fill in values", {
 
     #Sometimes we will ask you to fill in the values.

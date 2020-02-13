@@ -12,17 +12,9 @@ which are in turn inspired by Edgecase's [Ruby Koans](http://rubykoans.com/).
 
 ## Getting started
 ```
-pgcudahy$ git clone https://github.com/pgcudahy/advRkoans
-Cloning into 'advRkoans'...
-remote: Enumerating objects: 40, done.
-remote: Counting objects: 100% (40/40), done.
-remote: Compressing objects: 100% (29/29), done.
-remote: Total 40 (delta 6), reused 37 (delta 5), pack-reused 0
-Unpacking objects: 100% (40/40), done.
-pgcudahy$ cd advRkoans/
 pgcudahy$ R
-> devtools::load_all(".")
-Loading advRkoans
+> devtools::install_github("pgcudahy/advRkoans")
+> library(advRkoans)
 > walk_the_path()
 ══ Thinking about expectations ═════════════════════════════════════════════════
    expect truth has damaged your karma

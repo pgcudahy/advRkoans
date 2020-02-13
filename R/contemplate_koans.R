@@ -9,11 +9,8 @@
 
 `____` <- 0
  
-#Need to set up a test runner to:
-#run the tests in order
-#give the trace for the failed test
-#count passed tests
-#also a feature to run named tests
+
+#TODO: Needs a feature to run named lessons
 
 #' Walk the path to R enlightenment
 #'
@@ -23,7 +20,8 @@
 walk_the_path <- function() {
 
     "Run the koan tests with a custom runner output."
-
+    #Maybe use testthat::test_dir instead to avoid restarts ugliness,
+    #but would have to order the tests
     for (koan in koans_df$lesson_file) {
         testthat::test_file(koan, reporter = sensei)
         #Sensei throws a restart if a test fails
