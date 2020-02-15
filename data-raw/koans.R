@@ -6,7 +6,9 @@ koans <- c(
 
 koans_df <- dplyr::tibble(lesson_file = koans) %>%
     dplyr::mutate(lesson_base = basename(lesson_file)) %>%
-    dplyr::mutate(lesson_directory = dirname(lesson_file)) %>%
+    dplyr::mutate(lesson_directory = dirname(lesson_file) %>%
+        stringr::str_split("/") %>% 
+        purrr::pluck(1,2)) %>%
     dplyr::mutate(number_koans = purrr::map_int(lesson_file, function(x)
         getParseData(parse(file = x)) %>%
         dplyr::filter(text == "test_that") %>%
