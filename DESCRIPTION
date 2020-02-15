@@ -1,14 +1,18 @@
 Package: advRkoans
 Title: A tutorial for learning Advanced R by making tests pass
 Version: 0.1.0
-Authors@R: 
+Authors@R: c(
     person(given = "Patrick",
            family = "Cudahy",
            role = c("aut", "cre"),
            email = "pgcudahy@gmail.com",
-           comment = c(ORCID = "0000-0003-4462-9567"))
+           comment = c(ORCID = "0000-0003-4462-9567")),
+    person(given = "Hadley",
+           family = "Wickham",
+           email = "hadley@rstudio.com",
+           role = c("ant")))
 Description: advRkoans is an interactive tutorial for learning advanced R programming 
-    language by making tests pass. Following Hadley Wickham's Advanced R https://adv-r.hadley.nz/.
+    by making tests pass. Following Hadley Wickham's Advanced R https://adv-r.hadley.nz/.
     Inspired by Greg Malcom's "Python Koans" at https://github.com/gregmalcolm/python_koans,
     which are in turn inspired by Edgecase's "Ruby Koans" which can be found at http://rubykoans.com/.
 License: MIT + file LICENSE
@@ -24,3 +28,5 @@ Depends: R (>= 2.10)
 RoxygenNote: 7.0.2
 URL: https://github.com/pgcudahy/advRkoans
 BugReports: https://github.com/pgcudahy/advRkoans/issues
+Suggests: 
+    dplyr

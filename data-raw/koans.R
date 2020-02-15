@@ -1,7 +1,8 @@
 ## code to prepare `koans` dataset goes here
 koans <- list(
     "R/koans/about-expectations.R",
-    "R/koans/about-binding-basics.R")
+    "R/koans/about-binding-basics.R",
+    "R/koans/about-copy-on-modify.R")
 
 koans_df <- dplyr::tibble(lesson_file = unlist(koans)) %>%
     dplyr::mutate(number_koans = purrr::map_int(lesson_file, function(x)

@@ -16,8 +16,13 @@ answers <- list(
             '"invalid (do_set) left-hand side to assignment", fixed=TRUE'),
         "rules can be broken" = c("`_abc`", "`if`"),
         "double quotes are not a good option" = c('get("_abc")', 'get("if")'),
-        "make.names() is irreversible" = 
-            c('"X"', '"A."', '"if."', '"if."', '"if"')))
+        "make.names() is irreversible" =
+            c('"X"', '"A."', '"if."', '"if."', '"if"')),
+    about_copy_on_modify = list(
+        "R performs copy on modify" = c("lobstr::obj_addr(y)"),
+        "tracemem() can show when an object is copied" = c('"^tracemem"', "NA"),
+        "the same rules apply to function calls" = c("NA", '"^tracemem"'))
+    )
 
 generate_tests <- function() {
     lessons <- koans_df$lesson_file
@@ -25,6 +30,6 @@ generate_tests <- function() {
     new_tests <- purrr::map2(tests, answers,
         function(x, y) purrr::reduce(as.vector(unlist(y)),
         function(a, b) sub("`_*_`", b, a), .init = x))
-    purrr::map2(new_tests, koans_df$test_file,
+    purrr::walk2(new_tests, koans_df$test_file,
         function(x, y) writeLines(x, con = y))
 }

@@ -31,7 +31,8 @@ testthat::test_that("names with the same values can be different objects", {
     expect_false(lobstr::obj_addr(d) == lobstr::obj_addr(a))
 })
 
-testthat::test_that("many ways of accessing functions point to the same object", {
+testthat::test_that(
+    "many ways of accessing functions point to the same object", {
 
     mean_functions <- list(
         mean,
@@ -50,18 +51,15 @@ testthat::test_that("names have rules", {
     #Syntactic names consist of letters, digits, . and _
     #but can’t begin with _ or a digit
 
-    testthat::expect_error(eval(parse(text = "_abc <- 1")), 
-        "unexpected input")
+    testthat::expect_error(eval(parse(text = "_abc <- 1")), "unexpected input")
 
     #You can’t use any of the reserved words like TRUE, NULL, if, and function
 
-    testthat::expect_error(eval(parse(text = "if <- 10")), 
-        "unexpected assignment")
+    testthat::expect_error(eval(parse(text = "if <- 10")), "unexpected assignment")
 
     #A name can also not start with a dot followed by a number
 
-    testthat::expect_error(eval(parse(text = ".123e1 <- 1")), 
-        "invalid (do_set) left-hand side to assignment", fixed=TRUE)
+    testthat::expect_error(eval(parse(text = ".123e1 <- 1")), "invalid (do_set) left-hand side to assignment", fixed=TRUE)
 })
 
 testthat::test_that("rules can be broken", {
