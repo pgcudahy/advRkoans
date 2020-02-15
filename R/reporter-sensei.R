@@ -26,8 +26,6 @@ sensei <- R6::R6Class("sensei",
       }
       # reset failures for next test
       self$failures$initialize()
-      #Replace output with a function to count how many tests passed
-      self$cat_line("Wubba lubba dub dub\n")
       invokeRestart("testthat_abort_reporter")
     },
 
@@ -60,9 +58,3 @@ sensei <- R6::R6Class("sensei",
     }
   )
 )
-
-#, Need to include overall report (eg from pytonkoans)
-#, You have completed 63 (20 %) koans and 7 (out of 37) lessons.
-#, You are now 239 koans and 30 lessons away from reaching enlightenment.
-
-#, Although that way may not be obvious at first unless you're Dutch.

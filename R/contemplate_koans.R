@@ -17,16 +17,23 @@
 #' \code{walk_the_path} runs tests within the lessons and provides feedback
 #'
 #' @export
-walk_the_path <- function() {
-
-    "Run the koan tests with a custom runner output."
-    #Maybe use testthat::test_dir instead to avoid restarts ugliness,
-    #but would have to order the tests
-    for (koan in system.file(koans_df$lesson_directory, 
-        koans_df$lesson_base, package = "advRkoans")) {
-        testthat::test_file(koan, reporter = sensei)
-        #Sensei throws a restart if a test fails
-        #Let's catch it and stop parsing any new files
-        withRestarts(break)
+walk_the_path <- function(df = koans_df,
+                          koans_passed = 0,
+                          lessons_passed = 0) {
+    file <- system.file(df$lesson_directory[[1]],
+                        df$lesson_base[[1]],
+                        package = "advRkoans")
+    result <- testthat::test_file(file, reporter = sensei)
+    if(length(result) == df$number_koans[[1]]) {
+        if(nrow(df > 1)) {
+            remaining_lessons <- df %>% dplyr::slice(-1)
+            cat("\n")
+            walk_the_path(df = remaining_lessons,
+                          koans_passed = koans_passed + length(result),
+                          lessons_passed = lessons_passed + 1)
+        }
+    }
+    else {
+        report_statistics(koans_passed, lessons_passed, result)
     }
 }

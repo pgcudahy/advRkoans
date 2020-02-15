@@ -4,7 +4,7 @@
 \alias{walk_the_path}
 \title{Walk the path to R enlightenment}
 \usage{
-walk_the_path()
+walk_the_path(df = koans_df, koans_passed = 0, lessons_passed = 0)
 }
 \description{
 \code{walk_the_path} runs tests within the lessons and provides feedback
