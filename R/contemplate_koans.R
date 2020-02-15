@@ -22,7 +22,7 @@ walk_the_path <- function() {
     "Run the koan tests with a custom runner output."
     #Maybe use testthat::test_dir instead to avoid restarts ugliness,
     #but would have to order the tests
-    for (koan in koans_df$lesson_file) {
+    for (koan in advRkoans:::koans_df$lesson_file) {
         testthat::test_file(koan, reporter = sensei)
         #Sensei throws a restart if a test fails
         #Let's catch it and stop parsing any new files
