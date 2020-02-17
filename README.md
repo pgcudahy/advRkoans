@@ -12,9 +12,10 @@ which are in turn inspired by Edgecase's [Ruby Koans](http://rubykoans.com/).
 
 ## Getting started
 ```
+pgcudahy$ git clone https://github.com/pgcudahy/advRkoans
+pgcudahy$ cd advRkoans
 pgcudahy$ R
-> devtools::install_github("pgcudahy/advRkoans")
-> library(advRkoans)
+> devtools::load_all()
 > walk_the_path()
 ══ Thinking about expectations ═════════════════════════════════════════════════
    expect truth has damaged your karma
@@ -23,10 +24,11 @@ You have not yet reached enlightenment ...
    -=> TRUE OR FALSE? <=- isn't true.
 
 Please meditate on the following code:
-   koans/about-expectations.R#5:1
+   /Users/pgcudahy/advRkoans/inst/koans/about-expectations.R#5:1
      testthat::expect_true(`___`)
-Wubba lubba dub dub
 
+You have completed 0 (0%) koans and 0 (out of 3) lessons.
+You are now 16 koans and 3 lessons away from reaching enlightnment
 > 
 ```
 Most tests are fixed by opening the file with the test error in a text editor
