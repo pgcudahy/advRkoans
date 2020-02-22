@@ -16,6 +16,12 @@
 #'
 #' \code{walk_the_path} runs tests within the lessons and provides feedback
 #'
+#' @param df Adataframe of lessons and koans
+#' @param koans_passed An integer. Accumulator of how many koans have been
+#' passed
+#' @param lessons_passed An integer. Accumulator of how many lessons have been
+#' passed
+#'
 #' @export
 walk_the_path <- function(df = koans_df,
                           koans_passed = 0,
@@ -24,8 +30,8 @@ walk_the_path <- function(df = koans_df,
                         df$lesson_base[[1]],
                         package = "advRkoans")
     result <- testthat::test_file(file, reporter = sensei)
-    if(length(result) == df$number_koans[[1]]) {
-        if(nrow(df > 1)) {
+    if (length(result) == df$number_koans[[1]]) {
+        if (nrow(df > 1)) {
             remaining_lessons <- df %>% dplyr::slice(-1)
             cat("\n")
             walk_the_path(df = remaining_lessons,

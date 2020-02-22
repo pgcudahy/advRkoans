@@ -6,6 +6,15 @@
 \usage{
 walk_the_path(df = koans_df, koans_passed = 0, lessons_passed = 0)
 }
+\arguments{
+\item{df}{Adataframe of lessons and koans}
+
+\item{koans_passed}{An integer. Accumulator of how many koans have been
+passed}
+
+\item{lessons_passed}{An integer. Accumulator of how many lessons have been
+passed}
+}
 \description{
 \code{walk_the_path} runs tests within the lessons and provides feedback
 }
