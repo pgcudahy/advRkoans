@@ -11,10 +11,11 @@ testthat::test_that("names can reference existing objects", {
     x <- c(1, 2, 3)
     y <- x
 
-    #y isn't a copy of x, it's another binding to the existing object
-    #You can access an object’s identifier with lobstr::obj_addr()
+    # y isn't a copy of x, it's another binding to the existing object
+    # Use expect_reference() to compare the underlying memory addresses
+    # of two objects
 
-    expect_equal(lobstr::obj_addr(`__`), lobstr::obj_addr(x))
+    testthat::expect_reference(`___`, x)
 })
 
 testthat::test_that("names with the same values can be different objects", {
@@ -23,11 +24,13 @@ testthat::test_that("names with the same values can be different objects", {
     c <- b
     d <- 1:10
 
+    # Use lobstr::obj_addr() to display an object's memory address
+
     expect_equal(`__`, a)
     expect_equal(`__`, a)
     expect_equal(`__`, a)
-    expect_equal(`__`, lobstr::obj_addr(a))
-    expect_equal(`__`, lobstr::obj_addr(a))
+    expect_reference(`__`, a)
+    expect_reference(`__`, a)
     expect_false(`__` == lobstr::obj_addr(a))
 })
 
